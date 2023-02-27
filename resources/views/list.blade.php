@@ -33,6 +33,7 @@
         </nav>
         <p class="ml-14 py-2 text-meetGray font-medium text-lg" >Number of requests</p>
         <div class="conten mx-14 ">
+            {{$bookingData}}
             @component('components.cardList')
                 @slot('id') A35DB53F @endslot
                 @slot('dateF') 14/02/2022 @endslot

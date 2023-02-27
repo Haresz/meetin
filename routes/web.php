@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConsumeApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,13 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/list', function () {
-    return view('list');
-});
+
+Route::get('list',[ConsumeApiController::class,'getDataBooking']);
+
+// Route::get('/list',function () {
+//     return view('list');
+// });
+
 Route::get('/detail', function () {
     return view('detail');
 });
